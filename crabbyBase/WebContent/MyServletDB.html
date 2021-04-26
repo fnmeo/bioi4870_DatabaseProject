@@ -1,0 +1,79 @@
+<html>
+<head>
+<style>
+header {
+	font-family: Georgia, serif;
+    background-color:rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+    text-align:left;
+    padding:5px;	 
+}
+nav {
+	font-family: Georgia, serif;
+    line-height:30px;
+    background-color:rgb(219, 219, 219);
+    height:100px;
+    width:80px;
+    float:left;
+    padding:5px;	      
+}
+section {
+	font-family: Georgia, serif;
+    width:800px;
+    float:left;
+    padding:10px;	 	 
+}
+footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;	 	 
+}
+</style>
+</head>
+
+<body>
+<header>
+<h1> Crab Ancestry </h1>
+</header>
+
+<nav>
+<a href="/crabbyBase/searchCrabs.html">Sequences</a> <br>
+</nav>
+
+<section>
+Phylogenetic tree based on mitochondrion, complete genome of 10 distinct crab species.
+<br>
+Select organism on tree to learn more.
+<form name="formmap" action="SimpleFormSearch" method="POST">
+  <input type ='hidden' id='crab' name='crabInput'/>
+</form>
+<img src="PhyloTree.PNG" usemap="#image-map">
+ 
+<map name="image-map">
+    <area coords="850,76,1281,97" shape="rect" href="#" onClick = "foo('Neopetrolisthes maculatus')" alt="Neopetrolisthes maculatus">
+    <area coords="936,159,1376,176" shape="rect" href="#" onClick = "foo('Callinectes sapidus')" alt="Callinectes sapidus">
+    <area coords="869,49,1292,66" shape="rect" href="#" onClick = "foo('Clibanarius infraspinatus')" alt="Clibanarius infraspinatus">
+    <area coords="918,104,1266,121" shape="rect" href="#" onClick = "foo('Chionoecetes opilio')" alt="Chionoecetes opilio">
+    <area coords="927,133,1217,148" shape="rect" href="#" onClick = "foo('Scylla serrata')" alt="Scylla serrata">
+    <area coords="858,22,1199,40" shape="rect" href="#" onClick = "foo('Birgus latro')" alt="Birgus latro">
+    <area coords="866,187,1103,203" shape="rect" href="#" onClick = "foo('Lomis hirta')" alt="Lomis hirta">
+    <area coords="755,211,1028,230" shape="rect" href="#" onClick = "foo('Pagurus nigrofascia')" alt="Pagurus nigrofascia">
+    <area coords="718,237,1021,258" shape="rect" href="#" onClick = "foo('Paralithodes platypus')" alt="Paralithodes platypus">
+    <area coords="701,267,1053,284" shape="rect" href="#" onClick = "foo('Paralithodes camtschaticus')" alt="Paralithodes camtschaticus">
+</map>
+
+<script>
+function foo(n)
+{
+	 document.getElementById('crab').value = n;
+	 document.formmap.submit();
+}
+</script>
+
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<html>
+<head>
+<style>
+header {
+	font-family: Georgia, serif;
+    background-color:rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+    text-align:left;
+    padding:5px;	 
+}
+nav {
+	font-family: Georgia, serif;
+    line-height:30px;
+    background-color:#eeeeee;
+    height:100px;
+    width:80px;
+    float:left;
+    padding:5px;	      
+}
+section {
+	
+    width:350px;
+    float:left;
+    padding:10px;	 	 
+}
+
+footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;	 	 
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1> Search Crab Sequences</h1>
+</header>
+
+<nav>
+<a href="/crabbyBase/MyServletDB.html">Organism Data</a> <br>
+</nav>
+
+<section>
+	<h1>Choose crab for sequence used</h1>
+	
+	<form action="SimpleFormInsert" method="POST">
+	<label for="crabs">Choose an Organism:</label>
+	<select id="crabs" name="crabInput">
+  		<option value="Allopetrolisthes spinifrons">Porcelain Crab</option>
+  		<option value="Birgus latro">Coconut Crab</option>
+  		<option value="Clibanarius infraspinatus">Orange striped hermit crab</option>
+  		<option value="Lomis hirta"> Hairy stone crabs </option>
+  		<option value="Neopetrolisthes maculatus"> Small-dot anemone crab  </option>
+  		<option value="Pagurus nigrofascia"> Hermit Crab (Pagurus nigrofascia) </option>
+  		<option value="Paralithodes camtschaticus">  Red king crab </option>
+  		<option value="Paralithodes platypus">  Blue king crab </option>
+  		<option value="Patagurus rex">  Hermit crab </option>
+  		<option value="Scylla serrata">  Mud Crab </option>
+  		<option value="Chionoecetes opilio">  Snow Crab </option>
+	</select>
+		<input type="submit" value="Submit" />
+	</form>
+
+</section>
+
+</body>
+</html>
