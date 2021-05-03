@@ -43,7 +43,7 @@ public class SimpleFormSearch extends HttpServlet {
 	          String desc = rs.getString("description").trim();
 	          
 	          if (scientificName.isEmpty() || scientificName.contains(scientificName)) {
-	             out.println("Gene Name: " + organismName);
+	             out.println("Organism Name: " + organismName);
 	             out.println("Scientific Name: " + sciName);
 	             out.println("Description: " + desc);
 	             out.println("<img src=\"images/" + sciName +".jpg\" alt=\"" + sciName + "\">" );
